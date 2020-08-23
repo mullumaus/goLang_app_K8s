@@ -295,7 +295,7 @@ Use this script to deploy go application on Kubernetes
 # Create Deployment
 The deployment can be created by command:
 ```
-./run -d
+./run.sh -d
 ```
 or
 ```
@@ -320,7 +320,7 @@ deploy:
 # List resources in the namespace
 Run command:
 ```
-./run -l
+./run.sh -l
 ```
 or
 ```
@@ -344,9 +344,9 @@ replicaset.apps/goapp-deployment-6bbb78fd4c   2         2         2       20s
 ```
 
 # Test 
-Run command './run -t' to test your deployment
+Run command './run.sh -t' to test your deployment
 ```
-./run -t
+./run.sh -t
 ```
 or
 ```
@@ -365,7 +365,7 @@ If you see the output looks like as below, your deployment is successful:
 # Clean up
 Remove all resources in the namespace 'technical-test'
 ```
-./run -c
+./run.sh -c
 ```
 or
 ```
