@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: log-volume
+  namespace: technical-test
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: manual
+  capacity:
+    storage: 400Mi
+  hostPath:
+    path: /opt/volume/goapp
+
