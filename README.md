@@ -11,6 +11,8 @@ This repository has two parts:
 1. the source code, unit test suite, CI pipeline, and docker file to containerise the application into a single docker image
 2. the Kubernetes manifests to demostrate how to deploy the application on Kubernetes
 
+The application uses Gin to create a simple web application. Gin is a HTTP web framework written in Go.
+
 All deployment steps are encapsulated in Makefile
 # Setup
   You'll need to install docker, Golang, as well as the git, curl, make and jq commands.
@@ -63,6 +65,10 @@ endif
 Run below command to generate the go executable file in ../bin/goapp.
 ```
 make build
+```
+The version and commit SHA are passed to GO program via ldflags
+```
+FLAGS := -ldflags "-X main.version=$(VERSION) -X main.lastcommit=$(COMMIT)"
 ```
 # Install the application
 Run command
