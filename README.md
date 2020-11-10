@@ -18,8 +18,8 @@ All deployment steps are encapsulated in Makefile
   You'll need to install docker, Golang, as well as the git, curl, make and jq commands.
   Open terminal window, clone this repository and cd into it.
   ```
-  git clone https://github.com/mullumaus/test_goLang.git
-  cd test_goLang
+  git clone https://github.com/mullumaus/goLang_app_K8s.git
+  cd goLang_app_K8s
   ```
 # File structure
   test_goLang directory contains following files:
